@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>OpenWeatherMap Api</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-  
-    <div class="input">
-      <input type="text" placeholder="Enter the city" class="input_text">
-      <input type="submit" value="Submit" class="submit">
-    </div>
-  </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="container">
-    <div class="card">
-      <h1 class="name" id="name"></h1>
-      <p class="temp"></p>
-      <p class="clouds"></p>
-      <p class="desc"></p>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header><i class='bx bx-left-arrow-alt'></i>Pogoda</header>
+      <section class="input-part">
+        <p class="info-txt"></p>
+        <div class="content">
+          <input type="text" spellcheck="false" placeholder="Podaj miasto" required>
+          <div class="separator"></div>
+          <button>Pobierz lokalizację</button>
+        </div>
+      </section>
+      <section class="weather-part">
+        <img src="" alt="Weather Icon">
+        <div class="temp">
+          <span class="numb">_</span>
+          <span class="deg">°</span>C
+        </div>
+        <div class="weather">_ _</div>
+        <div class="location">
+          <i class='bx bx-map'></i>
+          <span>_, _</span>
+        </div>
+        <div class="bottom-details">
+          <div class="column feels">
+            <i class='bx bxs-thermometer'></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">_</span>
+                <span class="deg">°</span>C
+              </div>
+              <p>Odczuwalna</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <i class='bx bxs-droplet-half'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Wilgotność</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-<script src="app.js"></script>
-</body>
+    
+    <script src="script.js"></script>
+
+  </body>
 </html>
